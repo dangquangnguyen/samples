@@ -11,5 +11,23 @@ pipeline {
         echo 'Package'
       }
     }
+    stage('deploy to test') {
+      steps {
+        parallel(
+          "deploy to test": {
+            sleep 2
+            
+          },
+          "deploy to performance test": {
+            sleep 20
+            
+          },
+          "deploy to security test": {
+            echo 'Deploy to security test'
+            
+          }
+        )
+      }
+    }
   }
 }
