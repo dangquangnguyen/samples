@@ -16,6 +16,7 @@ pipeline {
         parallel(
           "deploy to test": {
             sleep 2
+            echo 'Say Hello World'
             
           },
           "deploy to performance test": {
