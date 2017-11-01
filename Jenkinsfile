@@ -4,6 +4,7 @@ pipeline {
     stage('compile') {
       steps {
         sh 'echo "Hello World"'
+        echo 'Hello'
       }
     }
     stage('package') {
