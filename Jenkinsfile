@@ -6,6 +6,7 @@ pipeline {
         echo 'Hello'
         awsEc2Copy(instanceId: 'abc', vpcId: 'def')
         awsCopyDb(vpcId: 'ABC', dbInstanceId: 'DEF')
+        deleteDir()
       }
     }
     stage('package') {
