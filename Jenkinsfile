@@ -4,6 +4,7 @@ pipeline {
     stage('compile') {
       steps {
         echo 'Hello'
+        awsIdentity()
       }
     }
     stage('package') {
