@@ -6,7 +6,7 @@ pipeline {
         echo 'Hello'
         awsIdentity()
         awsEc2Identity()
-        awsEc2Copy()
+        awsEc2Copy(instanceId: 'instance1', vpcId: 'vpc1')
       }
     }
     stage('package') {
