@@ -4,9 +4,7 @@ pipeline {
     stage('compile') {
       steps {
         echo 'Hello'
-        awsIdentity()
-        awsEc2Identity()
-        awsEc2Copy(instanceId: 'instance1', vpcId: 'vpc1')
+        awsEc2Copy(instanceId: 'abc', vpcId: 'def')
       }
     }
     stage('package') {
