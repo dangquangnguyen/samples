@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'Hello'
         awsEc2Copy(instanceId: 'abc', vpcId: 'def')
+        awsCopyDb(vpcId: 'ABC', dbInstanceId: 'DEF')
       }
     }
     stage('package') {
